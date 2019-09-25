@@ -9,6 +9,11 @@ function updateComposition(skk) {
 
 function createRomanInput(table) {
   return function (skk, keyevent) {
+    if (keyevent.ctrlKey && keyevent.key == "-") {
+      skk.switchMode('ascii');
+      return true;
+    }
+
     if (keyevent.key == 'Enter') {
       return false;
     }
@@ -42,7 +47,6 @@ function createRomanInput(table) {
         skk.switchMode('ascii');
         return true;
       }
-
       if (keyevent.key == '/') {
         skk.switchMode('ascii-preedit');
         return true;

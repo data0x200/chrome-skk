@@ -1,7 +1,8 @@
 (function() {
 function createAsciiLikeMode(conv) {
   return function(skk, keyevent) {
-    if (keyevent.ctrlKey && keyevent.key == 'j') {
+    // C-'でひらがなモードにする
+    if (keyevent.ctrlKey && keyevent.key == "-") {
       skk.switchMode('hiragana');
       return true;
     }
