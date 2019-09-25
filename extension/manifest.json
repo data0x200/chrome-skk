@@ -37,7 +37,7 @@
       "id": "org.jmuk.skk.dvorak",
       "description": "An SKK clone",
       "language": "ja",
-      "layouts": ["us-dvorak"]
+      "layouts": ["us(dvorak)"]
     }
   ],
   "permissions": [
