@@ -22,6 +22,8 @@ var romanTable = {
 
   xtu:'\u3063', nn:'\u3093',
 
+  "'":'\u3063',
+
   ',':'\u3001', '.':'\u3002', '[':'\uff62', ']':'\uff63', ' ':'\u3000',
   '-':'\u30fc', ' ': '\u3000',
 
@@ -46,11 +48,18 @@ function initRomanTable() {
   }
 
   addYouon('x', 'y', '');
-  addYouon('t', 'h', romanTable['te']);
-  addYouon('d', 'h', romanTable['de']);
+  addYouon('c', 'g', romanTable['ci']);
+  addYouon('g', 'r', romanTable['gi']);
   addYouon('s', 'h', romanTable['si']);
   addYouon('c', 'h', romanTable['ti']);
+  addYouon('t', 'h', romanTable['ti']);
+  addYouon('d', 'h', romanTable['de']);
+  addYouon('n', 'h', romanTable['ni']);
+  addYouon('h', 'n', romanTable['hi']);
+  addYouon('m', 'v', romanTable['mi']);
+  addYouon('r', 'g', romanTable['ri']);
   addYouon('j', '',  romanTable['zi']);
+  addYouon('z', 'm', romanTable['zi']);
 
   // special case: shi==si, chi==ti, ji=zi
   romanTable['shi'] = romanTable['si'];

@@ -70,6 +70,15 @@ function createRomanInput(table) {
           skk.caret += text.length;
         });
       return true;
+    } else if (keyevent.shiftKey && keyevent.key == '"') {
+      skk.switchMode('preedit');
+      skk.processRoman(
+        "'", romanTable, function(text) {
+          skk.preedit = skk.preedit.slice(0, skk.caret) +
+            text + skk.preedit.slice(skk.caret);
+          skk.caret += text.length;
+        });
+      return true;
     }
 
     return false;
