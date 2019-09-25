@@ -11,7 +11,7 @@ function initPreedit(skk) {
 }
 
 function preeditKeybind(skk, keyevent) {
-  if (keyevent.key == 'Enter' || (keyevent.key == 'j' && keyevent.ctrlKey)) {
+  if (keyevent.key == 'Enter' || (keyevent.key == 'h' && keyevent.ctrlKey)) {
     skk.commitText(skk.preedit);
     skk.preedit = '';
     skk.roman = '';
@@ -19,28 +19,28 @@ function preeditKeybind(skk, keyevent) {
     return true;
   }
 
-  if (keyevent.key == 'Esc' || (keyevent.key == 'g' && keyevent.ctrlKey)) {
+  if (keyevent.key == 'Esc' || (keyevent.key == 'i' && keyevent.ctrlKey)) {
     skk.preedit = '';
     skk.roman = '';
     skk.switchMode('hiragana');
     return true;
   }
 
-  if (keyevent.key == 'Left' || (keyevent.key == 'b' && keyevent.ctrlKey)) {
+  if (keyevent.key == 'Left' || (keyevent.key == 'x' && keyevent.ctrlKey)) {
     if (skk.caret > 0) {
       skk.caret--;
     }
     return true;
   }
 
-  if (keyevent.key == 'Right' || (keyevent.key == 'f' && keyevent.ctrlKey)) {
+  if (keyevent.key == 'Right' || (keyevent.key == 'u' && keyevent.ctrlKey)) {
     if (skk.caret < skk.preedit.length) {
       skk.caret++;
     }
     return true;
   }
 
-  if (keyevent.key == 'Backspace') {
+  if (keyevent.key == 'Backspace' || (keyevent.key == 'd' && keyevent.ctrlKey)) {
     if (skk.roman.length > 0) {
       skk.roman = skk.roman.slice(0, skk.roman.length - 1);
     } else if (skk.preedit.length > 0 && skk.caret > 0) {
