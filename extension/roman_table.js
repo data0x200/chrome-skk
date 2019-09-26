@@ -56,10 +56,14 @@ function initRomanTable() {
   addYouon('d', 'h', romanTable['de']);
   addYouon('n', 'h', romanTable['ni']);
   addYouon('h', 'n', romanTable['hi']);
+  addYouon('p', 'r', romanTable['pi'])
   addYouon('m', 'v', romanTable['mi']);
   addYouon('r', 'g', romanTable['ri']);
   addYouon('j', '',  romanTable['zi']);
   addYouon('z', 'm', romanTable['zi']);
+  // special case
+  addYouon('d', 'b', romanTable['de'])
+  addYouon('t', 'w', romanTable['te'])
 
   // special case: shi==si, chi==ti, ji=zi
   romanTable['shi'] = romanTable['si'];
