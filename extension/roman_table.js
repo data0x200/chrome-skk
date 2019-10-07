@@ -56,6 +56,7 @@ function initRomanTable() {
   addYouon('d', 'h', romanTable['de']);
   addYouon('n', 'h', romanTable['ni']);
   addYouon('h', 'n', romanTable['hi']);
+  addYouon('b', 'v', romanTable['bi']);
   addYouon('p', 'r', romanTable['pi'])
   addYouon('m', 'v', romanTable['mi']);
   addYouon('r', 'g', romanTable['ri']);
